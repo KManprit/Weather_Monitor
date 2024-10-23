@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+</head>
+<body>
+    <h1>Weather Data</h1>
+    <ul>
+        <% weatherData.forEach(weather => { %>
+            <li>
+                <strong>City:</strong> <%= weather.city %><br>
+                <strong>Date:</strong> <%= new Date(weather.date).toLocaleString() %><br>
+                <strong>Average Temperature:</strong> <%= weather.avgTemp %> °C<br>
+                <strong>Condition:</strong> <%= weather.dominantCondition %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
